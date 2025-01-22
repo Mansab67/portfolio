@@ -12,11 +12,13 @@ const Skills = () => {
     { name: "Chakra UI", img: "https://img.icons8.com/?size=512&id=r9QJ0VFFrn7T&format=png", borderColor: "rgb(103, 58, 183)" },
     { name: "Mongo DB", img: "https://cdn.iconscout.com/icon/free/png-256/free-mongodb-3629020-3030245.png", borderColor: "rgb(76, 175, 80)" },
     { name: "Node.js", img: "https://cdn-icons-png.flaticon.com/512/919/919825.png", borderColor: "rgb(93, 201, 76)" },
-    { name: "Express.js", img: "https://miro.medium.com/max/480/1*4gwXUOhEVoq4qAP7SkmaNw.png", borderColor: "rgb(156, 39, 176)" },
+    { 
+      name: "Express.js", 
+      img: "https://cdn.iconscout.com/icon/free/png-256/express-3521595-2945058.png", 
+      borderColor: "rgb(156, 39, 176)" 
+    },
     { name: "TypeScript", img: "https://cdn-icons-png.flaticon.com/512/919/919832.png", borderColor: "rgb(0, 122, 204)" },
-
     { name: "Python", img: "https://cdn-icons-png.flaticon.com/512/5968/5968350.png", borderColor: "rgb(75, 192, 192)" },
-
   ];
 
   let tools = [
@@ -26,11 +28,8 @@ const Skills = () => {
     { name: "Postman", img: "https://cdn.iconscout.com/icon/free/png-256/free-postman-3521648-2945092.png", borderColor: "rgb(255, 87, 34)" },
     { name: "Firebase", img: "https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg", borderColor: "rgb(255, 193, 7)" },
     { name: "MySQL", img: "https://cdn.iconscout.com/icon/free/png-256/free-mysql-3521596-2945040.png", borderColor: "rgb(0, 121, 191)" },
-    
-  
-
     { name: "Slack", img: "https://cdn-icons-png.flaticon.com/512/5968/5968871.png", borderColor: "rgb(74, 20, 140)" },
-   
+    { name: "Mongo DB", img: "https://cdn.iconscout.com/icon/free/png-256/free-mongodb-3629020-3030245.png", borderColor: "rgb(76, 175, 80)" }
   ];
 
   return (
