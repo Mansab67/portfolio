@@ -74,14 +74,14 @@ const Projects = () => {
          onClick={toggleDetails2}
        />
      </div>
-     <h2>PortFolio</h2>
+     <h2>Crime Portal</h2>
   
      {showDetails2 && (
        <>
-       <div className='code' ><a href=''> <img src="   https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBs3rytrmJIkL6KZHtrKE-zE79zn5v82d1Bw&s" alt="github"/> Check Live Site</a> <a href=''>   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbqj9Ii13d6hx5a9kyLnC5A8A96LDSaSZv_w&s" alt="github"/> Get Code</a></div>
+       <div className='code' ><a href=''> <img src="   https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBs3rytrmJIkL6KZHtrKE-zE79zn5v82d1Bw&s" alt="github"/> Check Live Site</a> <a href=''>   <img src="https://crimepetrol.netlify.app/contact" alt="github"/> Get Code</a></div>
        <div className='project-details'>
          <p>
-         <span>Description</span>  :A responsive portfolio website designed to work well on all devices. It includes interactive features like project galleries and animations, an "About" section with key details, project showcases with images and videos, a contact form.
+         <span>Description</span>  :SafeTrack - Monitor, Report, Prevent. LawConnect - Bridging Communities and Authorities., a contact form.
          </p>
          <h3>Tools Used</h3> 
          <ul>

@@ -15,7 +15,7 @@ const Hero = () => {
         <span> Hi,I'm Mansab Mehto</span>, Full-Stack Developer 
       </h1>
       <p>
-      "I graduated with a degree in Bachelor of Computer Application, but I wasn’t satisfied with my chosen field. Determined to explore new opportunities, I decided to venture into coding. Although it was challenging at first, my passion for learning and the excellent guidance from Masai School kept me motivated. Today, I am proud to call myself a Full-Stack Developer."
+      "I graduated with a degree in Bachelor of Computer Application, A dynamic full-stack web developer with expertise in building scalable applications using modern technologies like JavaScript, React.js, and Node.js. Known for a passion for problem-solving, a collaborative approach, and thriving in high-pressure environments with complex technical challenges. Proficient in integrating cutting-edge technologies and staying updated with emerging tools, frameworks, and best practices. Outside of professional commitments, I enjoy continuous learning and personal projects to explore new technologies."
       </p>
       <div className="hero-action">
         <div className="heroconnect">  <a href="#contact">Connect With Me</a></div>
