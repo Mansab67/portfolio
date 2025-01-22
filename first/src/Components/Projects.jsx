@@ -40,7 +40,7 @@ const Projects = () => {
           <div className='code' ><a href='https://earnest-biscuit-def91d.netlify.app/'> <img src="   https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBs3rytrmJIkL6KZHtrKE-zE79zn5v82d1Bw&s" alt="Live"/> Check Live Site</a> <a href='https://github.com/Mansab67/yt'>   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbqj9Ii13d6hx5a9kyLnC5A8A96LDSaSZv_w&s" alt="github"/> Get Code</a></div>
           <div className='project-details'>
             <p>
-            <span>Description</span>  : E-commerce platform is designed to provide a seamless shopping experience, offering a Filter options to Choose products , friendly Ui,. We prioritize customer satisfaction with a user-friendly interface and round-the-clock support.
+            <span>Description</span>  : Combines "Video" and "Sphere," symbolizing a world of videos. It conveys the idea of a platform offering a vast collection of video content.
             </p>
             <h3>Tools Used</h3> 
             <ul>
@@ -78,7 +78,7 @@ const Projects = () => {
   
      {showDetails2 && (
        <>
-       <div className='code' ><a href=''> <img src="   https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBs3rytrmJIkL6KZHtrKE-zE79zn5v82d1Bw&s" alt="github"/> Check Live Site</a> <a href=''>   <img src="https://crimepetrol.netlify.app/contact" alt="github"/> Get Code</a></div>
+       <div className='code' ><a href='https://crimepetrol.netlify.app/'> <img src="   https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBs3rytrmJIkL6KZHtrKE-zE79zn5v82d1Bw&s" alt="github"/> Check Live Site</a> <a href=''>   <img src="https://github.com/manojRawat5/B41_WEB_033_Responsive-Rebels" alt="github"/> Get Code</a></div>
        <div className='project-details'>
          <p>
          <span>Description</span>  :SafeTrack - Monitor, Report, Prevent. LawConnect - Bridging Communities and Authorities., a contact form.
@@ -89,7 +89,7 @@ const Projects = () => {
            <li>CSS</li>
            <li>JavaScript</li>
            <li>Html</li>
-           <li>Chakra UI</li>      
+           <li></li>      
          </ul>
          <div className='additional-images'>
            <h3>Gallery</h3>

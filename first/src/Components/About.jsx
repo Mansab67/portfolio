@@ -13,8 +13,9 @@ const About = () => {
         <div className="about-selection">
           <div className="about-right">   
             <div className="about-para">
-              <p>⭐ {" "}I am a self-motivated Full-Stack developer with a unique journey from B.Com to tech. Despite starting with no coding background, my passion for learning and determination drove my transition into web development.</p><br /><br />
-              <p>⭐ {" "}I’m a Full-Stack developer with a strong foundation in web development and a passion for continuous learning. I thrive on building clean, intuitive designs that not only meet client expectations but also enhance user engagement.</p>
+            <p>⭐ {" "}I am a self-motivated Full-Stack developer with a solid foundation in computer applications, transitioning from a BCA background to the dynamic field of tech. My curiosity and determination have driven me to master web development and continuously expand my skill set.</p><br /><br />
+<p>⭐ {" "}As a Full-Stack developer, I combine technical expertise with a passion for crafting clean, user-friendly designs. I thrive on building solutions that not only meet client requirements but also deliver exceptional user experiences.</p>
+
             </div>
           </div>
         </div>

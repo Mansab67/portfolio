@@ -6,24 +6,33 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-image: url('https://www.shutterstock.com/image-photo/blank-black-corporate-stationery-on-600nw-1051434977.jpg');
+  background-image: url('');
   background-size: cover;
   background-position: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: overlay;
   position: sticky;
-  top:0px ;
+  top: 0;
   margin: 0;
   z-index: 1000;
   padding: 10px 100px;
-  box-shadow: 0px 0px 4px rgb(96, 88, 157);
-
+  box-shadow: 0px 4px 8px rgba(96, 88, 157, 0.7);
+  animation: slideDown 1s ease-out;
 }
- 
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 .navbar p {
   font-size: 38px;
   font-weight: 600;
-  background: linear-gradient(270deg, rgb(5, 84, 34) 15%, rgb(115, 210, 211) 100%);
+  background: linear-gradient(270deg, rgb(114, 9, 100) 15%, rgb(115, 210, 211) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -32,18 +41,26 @@ html {
 }
 
 .navbar p:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) rotate(2deg);
 }
 
 .navMenu {
   display: flex;
- 
   align-items: center;
   border-radius: 50px;
   cursor: pointer;
-  background: rgb(94,93,105);
-  background: linear-gradient(82deg, rgb(47, 42, 102) 0%, rgba(64,61,101,1) 0%, rgb(94, 161, 161) 0%, rgb(12, 88, 36) 28%, rgba(31,8,66,1) 100%);
+  background: linear-gradient(82deg, rgb(156, 12, 12) 0%, rgb(26, 16, 143) 0%, rgb(94, 161, 161) 0%, rgb(158, 4, 138) 28%, rgba(31, 8, 66, 1) 100%);
   z-index: 1000;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .navMenu li {
@@ -52,6 +69,12 @@ html {
   list-style: none;
   padding: 10px 20px;
   transition: all 0.5s;
+}
+
+.navMenu li:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }
 
 .navMenu li a {
@@ -63,7 +86,6 @@ html {
 }
 
 .navMenu li a:hover {
-  border-radius: 50px;
   color: rgb(140, 236, 161);
   transform: scale(1.1);
 }
@@ -83,7 +105,16 @@ html {
   width: 25px;
   height: 3px;
   background-color: white;
+  border-radius: 2px;
   transition: all 0.3s ease;
+}
+
+.burger:hover div:nth-child(1) {
+  transform: translateX(5px);
+}
+
+.burger:hover div:nth-child(2) {
+  transform: translateX(-5px);
 }
 
 .connect {
@@ -103,6 +134,19 @@ html {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   opacity: 0.8;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
 
 .scrollup:hover {
@@ -118,13 +162,23 @@ html {
   .navMenu {
     display: none;
     flex-direction: column;
-    position: fixed; 
-    top: 60px; 
+    position: fixed;
+    top: 60px;
     right: 20px;
     background-color: rgba(0, 0, 0, 0.9);
     width: 150px;
     border-radius: 10px;
-    z-index: 1500; /* Ensures it stays above other content */
+    z-index: 1500;
+    animation: slideInRight 0.5s ease;
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
 
   .navMenu.show {
@@ -142,6 +196,6 @@ html {
 
 @media screen and (max-width: 310px) {
   .navbar {
-       padding: 0;
+    padding: 0;
   }
 }
