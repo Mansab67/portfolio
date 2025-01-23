@@ -78,7 +78,7 @@ const Projects = () => {
   
      {showDetails2 && (
        <>
-       <div className='code' ><a href='https://crimepetrol.netlify.app/'> <img src="   https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBs3rytrmJIkL6KZHtrKE-zE79zn5v82d1Bw&s" alt="github"/> Check Live Site</a> <a href=''>   <img src="https://github.com/manojRawat5/B41_WEB_033_Responsive-Rebels" alt="github"/> Get Code</a></div>
+       <div className='code' ><a href='https://crimepetrol.netlify.app/'> <img src="   https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBs3rytrmJIkL6KZHtrKE-zE79zn5v82d1Bw&s" alt="github"/> Check Live Site</a> <a href='https://github.com/manojRawat5/B41_WEB_033_Responsive-Rebels'>   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbqj9Ii13d6hx5a9kyLnC5A8A96LDSaSZv_w&s" alt="github"/> Get Code</a></div>
        <div className='project-details'>
          <p>
          <span>Description</span>  :SafeTrack - Monitor, Report, Prevent. LawConnect - Bridging Communities and Authorities., a contact form.
