@@ -32,40 +32,41 @@ export const Navbar = () => {
     };
 
     return (
-        <>
-            <div className="navbar">
-                <p>PortFolio</p>
+        <div className="navbar">
+            <p>Portfolio</p>
 
-                <div className={`navMenu ${menuOpen ? 'show' : ''}`}>
-                    <li>
-                        <a href="#Home">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about">About Us</a>
-                    </li>
-                    <li>
-                        <a href="#Skills">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#Projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#contact">contact</a>
-                    </li>
-                </div>
-
-                <div className="burger" onClick={toggleMenu}>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-
-                {isVisible && (
-                    <button className="scrollup" onClick={scrollToTop} id="scroll-up">
-                        ↑
-                    </button>
-                )}
+            {/* Navbar Menu */}
+            <div className={`navMenu ${menuOpen ? 'show' : ''}`}>
+                <li>
+                    <a href="#Home" onClick={() => setMenuOpen(false)}>Home</a>
+                </li>
+                <li>
+                    <a href="#about" onClick={() => setMenuOpen(false)}>About Us</a>
+                </li>
+                <li>
+                    <a href="#Skills" onClick={() => setMenuOpen(false)}>Skills</a>
+                </li>
+                <li>
+                    <a href="#Projects" onClick={() => setMenuOpen(false)}>Projects</a>
+                </li>
+                <li>
+                    <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+                </li>
             </div>
-        </>
+
+            {/* Mobile Menu Toggle */}
+            <div className="burger" onClick={toggleMenu}>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            {/* Scroll-to-Top Button */}
+            {isVisible && (
+                <button className="scrollup show" onClick={scrollToTop} id="scroll-up">
+                    ↑
+                </button>
+            )}
+        </div>
     );
 };

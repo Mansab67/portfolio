@@ -1,198 +1,127 @@
-.about{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-
+/* General About Section Styling */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Reduced gap for compactness */
+  padding: 20px 10px; /* Compact padding */
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  box-sizing: border-box;
+  min-height: 100vh; /* Ensures the section covers the viewport */
+  overflow: hidden; /* Prevents any overflow issues */
 }
 
-.about-title{
-   width: 50%;
-   text-align: center;
+/* Title Styling */
+.about-title h1 {
+  font-size: 1.8rem; /* Reduced font size */
+  font-weight: bold;
+  text-align: center;
+  color: #ff416c;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px; /* Reduced letter spacing */
+  margin-bottom: 10px;
 }
 
-.about-title h1{
-    font-size: 50px;
-    color: rgb(232, 21, 158);
+/* About Text Styling */
+.about-para {
+  max-width: 500px; /* Limited width for smaller layout */
+  font-size: 0.9rem; /* Slightly reduced font size */
+  line-height: 1.4; /* Compact line height */
+  color: #ddd;
+  text-align: justify;
+  padding: 10px; /* Compact padding */
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #ff416c;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
-.about-title h1 span{
-    color: rgb(0, 0, 0);
-    font-size: 70px;
+.about-para:hover {
+  transform: scale(1.01);
 }
 
-.tools{
-  color: rgb(18, 241, 226);
-   font-weight: 600px;
-  font-size: 40px;
-} 
-
-.about-selection{
-    padding:50px 200px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+/* Education Section */
+.education {
+  text-align: center;
+  width: 100%;
+  max-width: 600px; /* Reduced max width */
 }
 
-.about-right{
-    text-align: center;
+.education h2 {
+  font-size: 1.5rem; /* Reduced font size */
+  color: #ff416c;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
-.about-para p{
-
-    font-size: 20px;
-    color: rgb(199, 194, 210); 
-  padding: 10px;
-  background-color: transparent; 
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+.education ul {
+  display: flex; /* Enables side-by-side layout */
+  justify-content: space-between; /* Spreads items evenly */
+  gap: 10px; /* Adds space between items */
+  padding: 0;
+  list-style: none;
 }
 
-.about-para p:hover{
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(81, 89, 196, 0.3); 
+.education ul li {
+  flex: 1; /* Equal width for both items */
+  font-size: 0.9rem; /* Reduced font size */
+  margin: 0; /* Removed vertical margin */
+  padding: 10px; /* Compact padding */
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #ff416c;
+  border-radius: 8px;
+  color: #ddd;
+  text-align: left;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
-.education{
-
-  text-align: center ;
-   h2{
-    color: rgb(190, 20, 113);
-    font-size: 36px;
-    padding: 50px 0px;
-   }
-   ul{
-    display: flex;
-gap: 50px;
-
-    li{
-      background-image: url('');
-      background-size: cover;
-      background-repeat: none;
-      background-position: center;
-      background-color: rgba(0, 0, 0, 0.5);
-      background-blend-mode: overlay; 
-      width: 300px;
-      list-style: none;
-      padding: 20px;
-      color: bisque;
-      cursor: pointer;
-      transition: 0.5s;
-      strong{
-        color: rgb(28, 159, 241);
-        font-size: 20px;
-      }
-    }
-   }
-   li:hover{
-     transform: scale(1.1);
-   }
+.education ul li:hover {
+  transform: scale(1.01);
+  border-left: 4px solid #ff4b2b;
 }
 
+.education ul li strong {
+  color: #ff416c;
+}
 
-
+/* Responsive Adjustments for Tablet and Mobile */
 @media (max-width: 768px) {
-  .about {
-    padding-top: 40px;
-  }
-
-  .about-title {
-    width: 90%;
-  }
-
-  .about-title h1 {
-    font-size: 40px;
-  }
-
-  .about-title span {
-    font-size: 60px;
-  }
-
-  .about-selection {
-    padding: 20px 50px;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .about-right {
-    padding: 20px;
-  }
-
-  .about-para p {
-    font-size: 16px;
-  }
-
-  .skills-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px;
-    padding: 10px;
-  }
-
-  .skill-item {
-    width: 90px;
-    height: 130px;
-  }
-
-  .skill-item img {
-    width: 70px;
-    height: 70px;
-  }
-}
-@media (max-width: 480px) {
-  .about {
-    padding: 20px 10px; /* Reduced padding for smaller screens */
-    flex-direction: column;
-  }
-
-  .about-title {
-    width: 100%;
-    text-align: center;
-  }
-
-  .about-title h1 {
-    font-size: 28px; /* Adjusted font size */
-  }
-
-  .about-title span {
-    font-size: 40px; /* Adjusted font size */
-  }
-
-  .about-selection {
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px;
-  }
-
-  .about-right {
-    text-align: center;
-    padding: 10px 5px;
-  }
-
-  .about-para p {
-    font-size: 14px; /* Reduced font size */
-    line-height: 1.6; /* Increased line height for readability */
-  }
-
-  .education {
-    text-align: center;
-    padding: 20px 5px;
-  }
-
-  .education h2 {
-    font-size: 24px; /* Smaller heading font size */
-  }
-
   .education ul {
-    flex-direction: column;
-    gap: 15px;
-    padding: 0;
+    flex-direction: column; /* Stacks items vertically */
+    gap: 10px;
   }
 
   .education ul li {
-    width: 100%; /* Full width for smaller screens */
-    padding: 10px;
-    font-size: 14px; /* Adjusted font size */
+    font-size: 0.8rem; /* Slightly smaller font */
+    padding: 8px; /* Reduced padding */
   }
 
-  .education ul li strong {
-    font-size: 16px; 
+  .education h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-para,
+  .education ul li {
+    font-size: 0.75rem; /* Compact font size */
+    padding: 6px; /* Reduced padding */
+  }
+
+  .about-title h1 {
+    font-size: 1.4rem; /* Further reduced font size */
+  }
+
+  .education h2 {
+    font-size: 1.2rem; /* Smaller heading */
+  }
+
+  .education ul li {
+    margin: 5px 0; /* Reduced margin */
   }
 }

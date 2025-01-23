@@ -1,228 +1,185 @@
-/* General Styling for Hero Component */
+/* General Hero Section Styling */
 .Hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 35px;
-  padding: 50px 20px;
-  background-image: url('https://img.freepik.com/free-vector/abstract-black-lines-geometric-background_677411-2748.jpg');
-  background-size: cover;
-  background-position: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: overlay;
-  animation: fadeInBackground 2s ease-in-out forwards;
-}
-
-@keyframes fadeInBackground {
-  0% {
-    opacity: 0;
-    transform: scale(1.1);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+  padding: 50px 10px; /* Reduced padding for compact layout */
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  text-align: center;
+  gap: 20px; /* Reduced gap for compactness */
+  min-height: 100vh; /* Ensure the hero fills the viewport */
+  box-sizing: border-box;
 }
 
 /* Profile Image Styling */
 .myprofile {
-  margin-top: 20px;
-  height: 300px;
-  width: 300px;
-  border-radius: 100%;
+  height: 200px; /* Reduced size for compactness */
+  width: 200px;
+  border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-  animation: fadeInUp 1.5s ease-out;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.myprofile:hover {
+  transform: scale(1.05);
 }
 
 .profile {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
 .profile:hover {
   transform: scale(1.1);
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Hero Text Styling */
+/* Hero Heading Styling */
 .Hero h1 {
-  text-align: center;
-  font-size: 70px;
-  font-weight: 600;
-  color: #fff;
+  font-size: 1.8rem; /* Scaled down font size */
+  font-weight: bold;
   letter-spacing: 1.5px;
-  animation: fadeInText 2s ease-out;
+  margin-bottom: 10px; /* Added margin for spacing */
 }
 
 .Hero h1 span {
-  background: linear-gradient(270deg, rgb(16, 88, 176) 15%, rgb(119, 125, 144) 100%);
-  background-clip: text;
+  display: block;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 2.2rem; /* Scaled down font size */
+  font-weight: 700;
 }
 
+/* Hero Subtext Styling */
 .Hero p {
-  width: 50%;
-  text-align: center;
-  font-size: 18px;
-  color: rgb(205, 187, 187);
-  font-family: 'Courier New', monospace;
-  line-height: 1.6;
-  animation: fadeInText 2.2s ease-out;
+  max-width: 450px; /* Limited width for smaller screens */
+  font-size: 0.9rem; /* Scaled down font size */
+  line-height: 1.5;
+  color: #ddd;
+  margin: 0 auto;
+  padding: 0 10px; /* Added padding for better readability on small screens */
 }
 
-@keyframes fadeInText {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Action Buttons */
+/* Action Buttons Styling */
 .hero-action {
   display: flex;
-  align-items: center;
-  gap: 25px;
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 50px;
-  animation: fadeInText 2.5s ease-out;
+  flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+  justify-content: center;
+  gap: 15px; /* Reduced gap for compactness */
+  margin-top: 20px;
 }
 
+/* Connect Button */
 .heroconnect {
-  font-size: 18px;
-  padding: 12px 40px;
-  border-radius: 50px;
-  cursor: pointer;
-  background: linear-gradient(82deg, rgba(94, 93, 105, 1) 0%, rgba(31, 29, 55, 1) 50%, rgb(53, 0, 160) 100%);
-  color: white;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.heroconnect a {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: #fff;
+  padding: 10px 25px; /* Reduced padding */
+  font-size: 0.9rem; /* Scaled down font size */
+  font-weight: 600;
+  border-radius: 30px;
   text-decoration: none;
-  color: white;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 75, 43, 0.5);
 }
 
 .heroconnect:hover {
-  transform: scale(1.1);
-  background: linear-gradient(82deg, rgb(53, 0, 160) 0%, rgb(21, 171, 56) 100%);
+  transform: translateY(-5px);
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
 }
 
+/* Resume Button */
 .My-resume {
-  font-size: 18px;
-  padding: 12px 2px;
-  border-radius: 50px;
-  cursor: pointer;
-  color: rgb(43, 119, 125);
-  border: 2px solid rgb(43, 119, 125);
-  background: none;
-  transition: color 0.3s ease, border 0.3s ease, transform 0.3s ease;
-}
-
-.My-resume a {
-  padding: 12px 40px;
-  border-radius: 50px;
-  color: rgb(43, 119, 125);
+  background: transparent;
+  color: #ff416c;
+  border: 2px solid #ff416c;
+  padding: 10px 25px; /* Reduced padding */
+  font-size: 0.9rem; /* Scaled down font size */
+  font-weight: 600;
+  border-radius: 30px;
   text-decoration: none;
-}
-
-.My-resume a:hover {
-  color: rgb(140, 27, 138);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Reduced gap between text and icon */
 }
 
 .My-resume:hover {
-  color: rgb(140, 27, 138);
-  border: 2px solid rgb(140, 27, 138);
-  transform: scale(1.05);
+  color: #fff;
+  background: #ff416c;
+  border-color: #ff4b2b;
+  transform: translateY(-5px);
 }
 
-/* Responsive Design */
+/* Responsive Styling */
 @media (max-width: 768px) {
+  .Hero {
+    padding: 40px 10px; /* Reduced padding for smaller screens */
+    gap: 15px; /* Reduced gap */
+  }
+
   .myprofile {
-    height: 200px;
-    width: 200px;
-  }
-
-  .Hero h1 {
-    font-size: 40px;
-    width: 90%;
-  }
-
-  .Hero p {
-    font-size: 16px;
-    width: 90%;
-  }
-
-  .hero-action {
-    flex-direction: column;
-    gap: 15px;
-    font-size: 20px;
-  }
-
-  .heroconnect {
-    font-size: 16px;
-    padding: 10px 30px;
-  }
-
-  .My-resume {
-    font-size: 16px;
-    padding: 10px 5px;
-  }
-
-  .My-resume a {
-    padding: 10px 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .myprofile {
-    height: 150px;
+    height: 150px; /* Reduced size for smaller screens */
     width: 150px;
   }
 
   .Hero h1 {
-    font-size: 30px;
+    font-size: 1.5rem; /* Scaled down font size */
+  }
+
+  .Hero h1 span {
+    font-size: 1.8rem; /* Scaled down font size */
   }
 
   .Hero p {
-    font-size: 14px;
+    font-size: 0.8rem; /* Scaled down font size */
+    max-width: 90%; /* Use most of the available width */
   }
 
   .hero-action {
-    font-size: 18px;
+    flex-direction: column;
+    gap: 10px; /* Reduced gap for better alignment */
   }
 
-  .heroconnect {
-    font-size: 14px;
-    padding: 8px 20px;
-  }
-
+  .heroconnect,
   .My-resume {
-    font-size: 14px;
-    padding: 8px 2px;
+    width: 100%; /* Full-width buttons */
+    text-align: center;
+    font-size: 0.8rem; /* Scaled down font size */
+    padding: 8px 20px; /* Reduced padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .Hero {
+    padding: 30px 10px; /* Compact padding for smaller screens */
+    gap: 10px;
   }
 
-  .My-resume a {
-    padding: 8px 20px;
+  .myprofile {
+    height: 120px; /* Further reduced size */
+    width: 120px;
+  }
+
+  .Hero h1 {
+    font-size: 1.2rem; /* Smaller font size */
+  }
+
+  .Hero h1 span {
+    font-size: 1.5rem; /* Smaller font size */
+  }
+
+  .Hero p {
+    font-size: 0.7rem; /* Compact font for readability */
+  }
+
+  .heroconnect,
+  .My-resume {
+    font-size: 0.7rem; /* Compact font for buttons */
+    padding: 6px 15px; /* Compact padding */
   }
 }

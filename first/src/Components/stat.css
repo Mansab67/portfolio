@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364); /* Updated background gradient */
+    color: #ffffff;
+  }
+  
+  .stat-page {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364); /* Updated background gradient */
+  }
+  
+  /* Stats Section */
+  .stats-section {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Add gap between cards */
+    flex-wrap: wrap;
+  }
+  
+  .stat-card {
+    background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Smoother shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px); /* Hover effect */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+  
+  .stat-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Image shadow */
+  }
+  
+  /* Calendar Section */
+  .calendar-section {
+    width: 100%;
+    max-width: 800px;
+    background: linear-gradient(145deg, #0f2027, #203a43); /* Updated gradient for calendar section */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Smoother shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .calendar-section:hover {
+    transform: translateY(-5px); /* Hover effect */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+  
+  .calendar-section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 2px rgba(0, 0, 0, 0.3); /* Add text shadow for better visibility */
+  }
+  
+  .calendar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Image shadow */
+  }
+  
+  /* Calendar Info */
+  .calendar-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px; /* Better spacing */
+    text-align: center;
+  }
+  
+  .calendar-info div {
+    background: linear-gradient(145deg, #0f2027, #203a43); /* Updated gradient for calendar info boxes */
+    padding: 15px 20px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 120px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadows */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .calendar-info div:hover {
+    transform: translateY(-3px); /* Hover effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+  }
+  
+  .calendar-info strong {
+    display: block;
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  .calendar-info p {
+    font-size: 0.9rem;
+    color: #d1d1d1;
+    margin: 0;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .calendar-info {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .calendar-info div {
+      min-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .stats-section,
+    .calendar-section {
+      padding: 10px;
+    }
+  
+    .calendar-section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .calendar-info strong {
+      font-size: 0.9rem;
+    }
+  
+    .calendar-info p {
+      font-size: 0.8rem;
+    }
+  }
+  
