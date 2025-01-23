@@ -5,7 +5,7 @@ import p3 from '../assets/page3.png'
 import p4 from '../assets/page4.png'
 import p5 from '../assets/page5.png'
 
-import p1Main from '../assets/main.png'
+import p1Main from '../assets/movie.png'
 import port from '../assets/pro1.png'
 import portC from '../assets/proc.png'
 // import resp from '../assets/pro2.png'
@@ -33,11 +33,11 @@ const Projects = () => {
             onClick={toggleDetails}
           />
         </div>
-        <h2>Youtube Clone</h2>
+        <h2>Movie Streaming</h2>
      
         {showDetails1 && (
           <>
-          <div className='code' ><a href='https://earnest-biscuit-def91d.netlify.app/'> <img src="   https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBs3rytrmJIkL6KZHtrKE-zE79zn5v82d1Bw&s" alt="Live"/> Check Live Site</a> <a href='https://github.com/Mansab67/yt'>   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbqj9Ii13d6hx5a9kyLnC5A8A96LDSaSZv_w&s" alt="github"/> Get Code</a></div>
+          <div className='code' ><a href='https://shimmering-kitsune-443682.netlify.app/'> <img src="   https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBs3rytrmJIkL6KZHtrKE-zE79zn5v82d1Bw&s" alt="Live"/> Check Live Site</a> <a href='https://github.com/masai-course/mansab_mehto_ft38_714/tree/master/main%20project/react-movie-master'>   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbqj9Ii13d6hx5a9kyLnC5A8A96LDSaSZv_w&s" alt="github"/> Get Code</a></div>
           <div className='project-details'>
             <p>
             <span>Description</span>  : Combines "Video" and "Sphere," symbolizing a world of videos. It conveys the idea of a platform offering a vast collection of video content.
