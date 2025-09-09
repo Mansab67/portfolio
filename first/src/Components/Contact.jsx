@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./ContactForm.css";
 
 const ContactForm = () => {
@@ -28,7 +28,7 @@ const ContactForm = () => {
   return (
     <div id="contact" className="contact-form-container">
       <div className="contact-info">
-        <h2 className="contact-title">Let's Get in Touch</h2>
+        <h2 className="contact-title"> Lets Get in Touch</h2>
         <p className="contact-description">
           Feel free to reach out to me. You can call or send an email, and I’ll
           get back to you as soon as possible.
