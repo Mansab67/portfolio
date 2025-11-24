@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import "./skill.css";
 
 const Skills = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const skillSet = [
     {
       name: "HTML",
@@ -108,36 +133,113 @@ const Skills = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.8, y: 50 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <div className="about">
-      <div id="Skills" className="about-title">
+    <div className="about" ref={sectionRef}>
+      <motion.div
+        id="Skills"
+        className="about-title"
+        initial={{ opacity: 0, y: -50 }}
+        animate={isVisible ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8 }}
+      >
         <h1>Professional Skillset</h1>
-      </div>
-      <div className="skills-container">
-        {skillSet.map((item) => (
-          <div
+      </motion.div>
+
+      <motion.div
+        className="skills-container"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+      >
+        {skillSet.map((item, index) => (
+          <motion.div
             key={item.name}
             className="skill-item"
             style={{ borderColor: item.borderColor }}
+            variants={itemVariants}
+            whileHover={{
+              scale: 1.1,
+              rotate: [0, -5, 5, -5, 0],
+              boxShadow: `0 10px 30px ${item.borderColor}40`,
+              transition: { duration: 0.3 }
+            }}
+            whileTap={{ scale: 0.95 }}
           >
-            <img src={item.img} alt={item.name} loading="lazy" />
+            <motion.img
+              src={item.img}
+              alt={item.name}
+              loading="lazy"
+              whileHover={{ scale: 1.2, rotate: 360 }}
+              transition={{ duration: 0.5 }}
+            />
             {item.name}
-          </div>
+          </motion.div>
         ))}
-      </div>
-      <h2 className="tools">Tools I Use</h2>
-      <div className="skills-container">
+      </motion.div>
+
+      <motion.h2
+        className="tools"
+        initial={{ opacity: 0, x: -50 }}
+        animate={isVisible ? { opacity: 1, x: 0 } : {}}
+        transition={{ delay: 0.5, duration: 0.8 }}
+      >
+        Tools I Use
+      </motion.h2>
+
+      <motion.div
+        className="skills-container"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+      >
         {tools.map((item) => (
-          <div
+          <motion.div
             key={item.name}
             className="skill-item"
             style={{ borderColor: item.borderColor }}
+            variants={itemVariants}
+            whileHover={{
+              scale: 1.1,
+              rotate: [0, -5, 5, -5, 0],
+              boxShadow: `0 10px 30px ${item.borderColor}40`,
+              transition: { duration: 0.3 }
+            }}
+            whileTap={{ scale: 0.95 }}
           >
-            <img src={item.img} alt={item.name} loading="lazy" />
+            <motion.img
+              src={item.img}
+              alt={item.name}
+              loading="lazy"
+              whileHover={{ scale: 1.2, rotate: 360 }}
+              transition={{ duration: 0.5 }}
+            />
             {item.name}
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

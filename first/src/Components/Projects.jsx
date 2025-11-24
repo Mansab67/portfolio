@@ -1,23 +1,47 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import './project.css';
-import p2 from '../assets/main.png'
-import p3 from '../assets/page3.png'
-import p4 from '../assets/page4.png'
-import p5 from '../assets/page5.png'
+import p2 from '../assets/main.png';
+import p3 from '../assets/page3.png';
+import p4 from '../assets/page4.png';
+import p5 from '../assets/page5.png';
 
-import p1Main from '../assets/movie.png'
-import port from '../assets/pro1.png'
-import portC from '../assets/proc.png'
+import p1Main from '../assets/movie.png';
+import port from '../assets/pro1.png';
+import portC from '../assets/proc.png';
 // import resp from '../assets/pro2.png'
 
 const Projects = () => {
   const [showDetails1, setShowDetails] = useState(false);
   const [showDetails2, setShowDetail2] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   const toggleDetails = () => {
     setShowDetails(!showDetails1);
   };
-  
+
   const toggleDetails2 = () => {
     setShowDetail2(!showDetails2);
   };
